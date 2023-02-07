@@ -26,7 +26,16 @@ class _HomeScreenState extends State<HomeScreen> {
               title: Text("Flutter"),
             ),
             body: Center(
-              child: Text("${orientation.name}",style: TextStyle(fontSize: 30, letterSpacing: 2, fontWeight: FontWeight.bold,color: Colors.teal.shade900)),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircularProgressIndicator(),
+                  SizedBox(height: 30,),
+                  Text("${orientation.name}",style: TextStyle(fontSize: 30, letterSpacing: 2, fontWeight: FontWeight.bold,color: Colors.teal.shade900)),
+                  SizedBox(height: 30,),
+                  LinearProgressIndicator(),
+                ],
+              ),
             ),
           ),
         );
